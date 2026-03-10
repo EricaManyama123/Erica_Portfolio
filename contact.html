@@ -1,14 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Erica Manyama</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0d1b2a;
+color:white;
+}
+
+/* STAR BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:0.2;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#c084fc;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+}
+
+nav ul li a:hover{
+color:#c084fc;
+}
+
+/* CONTACT HEADER */
+
+.contact-header{
+text-align:center;
+padding:80px 20px;
+}
+
+.contact-header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.contact-header p{
+color:#bbb;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-section{
+display:flex;
+justify-content:center;
+gap:60px;
+padding:40px 80px;
+flex-wrap:wrap;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+max-width:350px;
+}
+
+.contact-info p{
+margin:15px 0;
+font-size:16px;
+}
+
+/* FORM */
+
+.contact-form{
+width:500px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:4px;
+font-size:16px;
+}
+
+.contact-form textarea{
+height:150px;
+resize:none;
+}
+
+/* BUTTON */
+
+.contact-form button{
+
+background:#0d9488;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.contact-form button:hover{
+background:#0f766e;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #333;
+margin-top:80px;
+color:#aaa;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <nav>
-<ul class="navbar">
+
+<div class="logo">EM.</div>
+
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="skills.html">Skills</a></li>
@@ -17,24 +169,92 @@
 <li><a href="resume.html">Resume</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+
 </nav>
 
-<section>
 
-<h1>Contact</h1>
+<!-- HEADER -->
 
-<p>Email: your@email.com</p>
+<section class="contact-header">
 
-<p>GitHub: github.com/ericamanyama123</p>
+<h1>Let's Talk</h1>
 
-<p>LinkedIn: linkedin.com/in/yourname</p>
+<p>Feel free to reach out if you'd like to collaborate, discuss data projects, or connect professionally.</p>
 
 </section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+
+<!-- CONTACT INFO -->
+
+<div class="contact-info">
+
+<h2>Contact Information</h2>
+
+<p>📧 Email:  
+<br>
+<a href="mailto:ericacjmanyama@gmail.com" style="color:#c084fc;">
+ericacjmanyama@gmail.com
+</a>
+</p>
+
+<p>💻 GitHub:  
+<br>
+<a href="https://github.com/EricaManyama123" target="_blank" style="color:#c084fc;">
+github.com/EricaManyama123
+</a>
+</p>
+
+<p>💼 LinkedIn:  
+<br>
+<a href="https://www.linkedin.com/in/erica-joshua-9749272a1/" target="_blank" style="color:#c084fc;">
+LinkedIn Profile
+</a>
+</p>
+
+<p>📱 Phone:  
+<br>
++91 6280388425
+</p>
+
+</div>
+
+
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="E-mail" required>
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+
+</section>
+
+
 <footer>
 
-<p>© 2026 Erica Manyama | Data Analyst Portfolio</p>
+© 2026 Erica Manyama | Data Analyst Portfolio
 
 </footer>
+
 
 </body>
 </html>
