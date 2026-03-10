@@ -6,46 +6,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skills</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Skills | Erica Manyama</title>
 
 <style>
 
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f6fa;
+}
+
+nav{
+background:#1f3c88;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
 .skills-container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:40px 20px;
+}
+
+h1{
+margin-bottom:20px;
 }
 
 .skills-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-margin-top:20px;
+gap:25px;
 }
 
 .skill-card{
-background:#ffffff;
-padding:20px;
+background:white;
+padding:25px;
 text-align:center;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-font-weight:bold;
 transition:0.3s;
 }
 
 .skill-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
-.skill-card i{
-font-size:40px;
-color:#1f3c88;
+.skill-card img{
+width:50px;
 margin-bottom:10px;
-display:block;
+}
+
+.skill-card p{
+margin:0;
+font-weight:600;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+background:#f0f0f0;
 }
 
 </style>
@@ -55,17 +86,15 @@ display:block;
 <body>
 
 <nav>
-<ul class="navbar">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="certifications.html">Certifications</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="contact.html">Contact</a></li>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="projects.html">Projects</a>
+<a href="certifications.html">Certifications</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
 
-</ul>
 </nav>
 
 <div class="skills-container">
@@ -75,47 +104,64 @@ display:block;
 <div class="skills-grid">
 
 <div class="skill-card">
-<i class="fab fa-python"></i>
-Python
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+<p>Python</p>
 </div>
 
 <div class="skill-card">
-<i class="fas fa-database"></i>
-SQL
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+<p>SQL</p>
 </div>
 
 <div class="skill-card">
-<i class="fas fa-file-excel"></i>
-Excel
+<img src="https://img.icons8.com/color/96/microsoft-excel-2019.png">
+<p>Excel</p>
 </div>
 
 <div class="skill-card">
-<i class="fas fa-chart-bar"></i>
-Power BI
+<img src="https://img.icons8.com/color/96/power-bi.png">
+<p>Power BI</p>
 </div>
 
 <div class="skill-card">
-<i class="fas fa-chart-line"></i>
-Data Visualization
+<img src="https://img.icons8.com/color/96/combo-chart.png">
+<p>Data Visualization</p>
 </div>
 
 <div class="skill-card">
-<i class="fas fa-square-root-variable"></i>
-Statistics
+<img src="https://img.icons8.com/color/96/statistics.png">
+<p>Statistics</p>
 </div>
 
 </div>
 
-<h1 style="margin-top:40px;">Soft Skills</h1>
+<h1 style="margin-top:50px;">Soft Skills</h1>
 
 <div class="skills-grid">
 
-<div class="skill-card">Problem Solving</div>
-<div class="skill-card">Critical Thinking</div>
-<div class="skill-card">Communication</div>
-<div class="skill-card">Teamwork</div>
-<div class="skill-card">Time Management</div>
-<div class="skill-card">Attention to Detail</div>
+<div class="skill-card">
+<p>Problem Solving</p>
+</div>
+
+<div class="skill-card">
+<p>Critical Thinking</p>
+</div>
+
+<div class="skill-card">
+<p>Communication</p>
+</div>
+
+<div class="skill-card">
+<p>Teamwork</p>
+</div>
+
+<div class="skill-card">
+<p>Time Management</p>
+</div>
+
+<div class="skill-card">
+<p>Attention to Detail</p>
+</div>
 
 </div>
 
