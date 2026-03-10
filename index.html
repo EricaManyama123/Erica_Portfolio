@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erica Manyama | Portfolio</title>
+<title>Erica Manyama | Data Analyst Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -20,9 +20,25 @@ font-family:'Poppins', sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
+background:#0f172a;
 color:white;
-height:100vh;
+overflow-x:hidden;
+}
+
+/* STAR BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.15;
+z-index:-1;
 }
 
 /* NAVBAR */
@@ -35,15 +51,15 @@ padding:25px 10%;
 }
 
 .logo{
-font-size:24px;
+font-size:26px;
 font-weight:600;
 color:#c084fc;
 }
 
 nav ul{
-list-style:none;
 display:flex;
 gap:30px;
+list-style:none;
 }
 
 nav ul li a{
@@ -61,57 +77,73 @@ color:#c084fc;
 .hero{
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:80px 10%;
-flex-wrap:wrap;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
+flex-direction:column;
 }
 
-.hero-text{
-max-width:600px;
-}
-
-.hero-text h3{
-font-size:28px;
+.hero h3{
+font-size:30px;
 margin-bottom:10px;
 }
 
-.hero-text h1{
-font-size:50px;
+.hero h1{
+font-size:55px;
 color:#c084fc;
 margin-bottom:20px;
 }
 
-.hero-text h2{
+.hero h2{
 font-size:30px;
-font-weight:400;
-}
-
-.hero-text span{
-color:#c084fc;
-}
-
-.hero-img img{
-width:350px;
 }
 
 /* typing cursor */
 
 .typing{
 border-right:3px solid #c084fc;
-white-space:nowrap;
-overflow:hidden;
+padding-right:5px;
 }
+
+/* ABOUT SECTION */
+
+.about{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:120px 10%;
+flex-wrap:wrap;
+}
+
+.about-text{
+max-width:600px;
+}
+
+.about-text h1{
+font-size:40px;
+margin-bottom:20px;
+color:#c084fc;
+}
+
+.about-text p{
+line-height:1.8;
+font-size:17px;
+}
+
+.about-img img{
+width:280px;
+border-radius:50%;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-.hero{
+.about{
 flex-direction:column;
 text-align:center;
-}
-
-.hero-img img{
-margin-top:40px;
-width:250px;
 }
 
 }
@@ -140,21 +172,44 @@ width:250px;
 
 </nav>
 
-<section class="hero">
+<!-- HERO -->
 
-<div class="hero-text">
+<section class="hero">
 
 <h3>Hi There! 👋</h3>
 
 <h1>I'm Erica Manyama</h1>
 
-<h2 class="typing" id="typing-text"></h2>
+<h2 class="typing" id="typing"></h2>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="about">
+
+<div class="about-text">
+
+<h1>Let Me Introduce Myself</h1>
+
+<p>
+
+I am an aspiring <b>Data Analyst and Data Scientist</b> passionate about transforming
+data into actionable insights.
+
+I enjoy working with data using tools such as <b>Python, SQL, Excel and Power BI</b>
+to analyze trends, solve problems and support data-driven decision making.
+
+My goal is to help organizations understand their data better and turn complex
+information into meaningful solutions.
+
+</p>
 
 </div>
 
-<div class="hero-img">
+<div class="about-img">
 
-<img src="https://cdni.iconscout.com/illustration/premium/thumb/programmer-working-on-laptop-illustration-download-in-svg-png-gif-file-formats--coding-development-programming-developer-pack-design-illustrations-3544443.png">
+<img src="erica.jpg">
 
 </div>
 
@@ -162,24 +217,49 @@ width:250px;
 
 <script>
 
-const text = "Data Analyst | Data Scientist";
-let index = 0;
+const words = [
+"Data Analyst",
+"Data Scientist"
+];
 
-function typeEffect() {
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
 
-if(index < text.length){
+function type(){
 
-document.getElementById("typing-text").innerHTML += text.charAt(index);
+currentWord = words[i];
 
-index++;
+if(isDeleting){
+document.getElementById("typing").textContent =
+currentWord.substring(0, j-1);
+j--;
+}else{
+document.getElementById("typing").textContent =
+currentWord.substring(0, j+1);
+j++;
+}
 
-setTimeout(typeEffect, 80);
+if(!isDeleting && j === currentWord.length){
+isDeleting = true;
+setTimeout(type,1000);
+return;
+}
+
+if(isDeleting && j === 0){
+isDeleting = false;
+i++;
+if(i === words.length){
+i = 0;
+}
+}
+
+setTimeout(type,120);
 
 }
 
-}
-
-typeEffect();
+type();
 
 </script>
 
