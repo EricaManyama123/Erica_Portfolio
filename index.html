@@ -146,6 +146,24 @@ width:260px;
 border-radius:50%;
 border:5px solid #c084fc;
 }
+/* LIGHT MODE */
+
+.light-mode{
+background:#ffffff;
+color:#000000;
+}
+
+.light-mode nav ul li a{
+color:#000000;
+}
+
+.light-mode footer{
+color:#555;
+}
+
+.light-mode body::before{
+display:none;
+}
 
 /* FOOTER */
 
@@ -179,6 +197,7 @@ color:#aaa;
 <li><a href="resume.html">Resume</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+<button id="theme-toggle">🌙</button>
 
 </nav>
 
@@ -269,6 +288,14 @@ setTimeout(type,isDeleting?60:120)
 type()
 
 </script>
+<script>
 
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", function(){
+document.body.classList.toggle("light-mode");
+});
+
+</script>
 </body>
 </html>
