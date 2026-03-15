@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,11 +74,11 @@ font-size:38px;
 color:#c084fc;
 }
 
-/* PROJECT GRID */
+/* GRID */
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:40px;
 padding:40px 100px;
 }
@@ -93,21 +92,24 @@ border-radius:15px;
 padding:25px;
 border:1px solid rgba(255,255,255,0.15);
 transition:0.3s;
-text-align:center;
+
+display:flex;
+flex-direction:column;
+
 }
 
 .project-card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 20px rgba(192,132,252,0.5);
 border:1px solid #c084fc;
+box-shadow:0 0 20px rgba(192,132,252,0.5);
 }
 
-/* PROJECT IMAGE */
+/* IMAGE */
 
 .project-card img{
 width:100%;
 border-radius:10px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 /* TITLE */
@@ -116,18 +118,18 @@ margin-bottom:20px;
 margin-bottom:10px;
 }
 
-/* DESCRIPTION */
+/* TEXT */
 
 .project-card p{
 font-size:14px;
-color:#cbd5f5;
 line-height:1.6;
+color:#cbd5f5;
+margin-bottom:12px;
 }
 
 /* TOOLS */
 
 .tools{
-margin-top:10px;
 color:#a5b4fc;
 font-size:14px;
 }
@@ -136,14 +138,14 @@ font-size:14px;
 
 .project-btn{
 
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
+margin-top:10px;
+padding:8px 18px;
 background:#c084fc;
-border-radius:8px;
+border-radius:6px;
 text-decoration:none;
 color:white;
 font-size:14px;
+width:fit-content;
 
 }
 
@@ -158,7 +160,7 @@ text-align:center;
 padding:30px;
 border-top:1px solid #333;
 color:#aaa;
-margin-top:40px;
+margin-top:80px;
 }
 
 </style>
@@ -166,6 +168,9 @@ margin-top:40px;
 </head>
 
 <body>
+
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -183,6 +188,9 @@ margin-top:40px;
 
 </nav>
 
+
+<!-- HEADER -->
+
 <section class="projects-header">
 
 <h1>My Recent <span>Works</span></h1>
@@ -192,6 +200,8 @@ margin-top:40px;
 </section>
 
 
+<!-- PROJECTS -->
+
 <section class="projects-grid">
 
 
@@ -199,21 +209,25 @@ margin-top:40px;
 
 <div class="project-card">
 
-<img src="images/blinkit.png" alt="Blinkit Dashboard">
+<img src="https://via.placeholder.com/400x200" alt="Blinkit Dashboard">
 
 <h3>Blinkit Sales Performance Dashboard</h3>
 
 <p>
-Analyzed Blinkit's sales data and developed an interactive Power BI dashboard to understand key business performance indicators. The dashboard visualizes outlet performance, product ratings and total sales trends.
+<strong>Description:</strong><br>
+Analyzed Blinkit's sales data and developed an interactive Power BI dashboard to understand key business performance indicators and sales trends.
 </p>
 
-<div class="tools">
-Tools: Power BI | DAX | Data Modeling
-</div>
+<p>
+<strong>Insight:</strong><br>
+Identified trends in outlet performance, product ratings, and total sales to support data-driven business decisions.
+</p>
 
-<a class="project-btn" href="https://github.com/EricaManyama123/Blinkit-Sales-Perfomance-Dashboard" target="_blank">
-GitHub
-</a>
+<p class="tools">
+<strong>Tools:</strong> Power BI | DAX | Data Modeling
+</p>
+
+<a class="project-btn" href="https://github.com/EricaManyama123/Blinkit-Sales-Perfomance-Dashboard" target="_blank">GitHub</a>
 
 </div>
 
@@ -222,21 +236,25 @@ GitHub
 
 <div class="project-card">
 
-<img src="images/osproject.png" alt="Operating System Project">
+<img src="https://via.placeholder.com/400x200" alt="Operating Systems Project">
 
 <h3>Operating Systems Memory Management</h3>
 
 <p>
-Implemented the FIFO page replacement algorithm to simulate real-time memory allocation and page replacement processes. Visualized system behavior using Python to analyze page faults and memory performance.
+<strong>Description:</strong><br>
+Implemented the FIFO page replacement algorithm to simulate real-time memory allocation and page replacement processes.
 </p>
 
-<div class="tools">
-Tools: C++ | Python | VS Code
-</div>
+<p>
+<strong>Insight:</strong><br>
+Visualized page faults and memory performance using Python simulations to analyze system behavior.
+</p>
 
-<a class="project-btn" href="https://github.com/EricaManyama123/OPERATING-SYSTEMS-FILE-" target="_blank">
-GitHub
-</a>
+<p class="tools">
+<strong>Tools:</strong> C++ | Python | VS Code
+</p>
+
+<a class="project-btn" href="https://github.com/EricaManyama123/OPERATING-SYSTEMS-FILE-" target="_blank">GitHub</a>
 
 </div>
 
@@ -245,26 +263,33 @@ GitHub
 
 <div class="project-card">
 
-<img src="images/flashsales.png" alt="Flash Sales Analysis">
+<img src="https://via.placeholder.com/400x200" alt="Flash Sales Analysis">
 
 <h3>E-commerce Flash Sales Analysis</h3>
 
 <p>
-Analyzed flash sales impact on product performance and customer engagement using Exploratory Data Analysis and Natural Language Processing to uncover customer sentiment patterns.
+<strong>Description:</strong><br>
+Analyzed flash sales impact on product performance and customer engagement using Exploratory Data Analysis and Natural Language Processing.
 </p>
 
-<div class="tools">
-Tools: Python | NLP | Jupyter Notebook
-</div>
+<p>
+<strong>Insight:</strong><br>
+Identified customer sentiment patterns and product trends influencing flash sale performance.
+</p>
 
-<a class="project-btn" href="https://github.com/EricaManyama123/DECRIPTIVE-FLASH-SALES-MARKETING-ANALYSIS-PROJECT" target="_blank">
-GitHub
-</a>
+<p class="tools">
+<strong>Tools:</strong> Python | NLP | Jupyter Notebook
+</p>
+
+<a class="project-btn" href="https://github.com/EricaManyama123/DECRIPTIVE-FLASH-SALES-MARKETING-ANALYSIS-PROJECT" target="_blank">GitHub</a>
 
 </div>
 
 
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -272,6 +297,6 @@ GitHub
 
 </footer>
 
+
 </body>
 </html>
-```
