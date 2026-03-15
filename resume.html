@@ -108,24 +108,6 @@ border-top:1px solid #333;
 margin-top:60px;
 color:#aaa;
 }
-/* LIGHT MODE */
-
-.light-mode{
-background:#ffffff;
-color:#000000;
-}
-
-.light-mode nav ul li a{
-color:#000000;
-}
-
-.light-mode footer{
-color:#555;
-}
-
-.light-mode body::before{
-display:none;
-}
 
 </style>
 
@@ -146,7 +128,6 @@ display:none;
 <li><a href="resume.html">Resume</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
-<button id="theme-toggle">🌙</button>
 
 </nav>
 
@@ -166,18 +147,10 @@ Download Resume
 
 <footer>
 
-© 2026 Erica Manyama | Data Analyst Portfolio
+© 2026 Erica Manyama | Data Analyst & Data Scientist
 
 </footer>
-<script>
 
-const toggle = document.getElementById("theme-toggle");
-
-toggle.addEventListener("click", function(){
-document.body.classList.toggle("light-mode");
-});
-
-</script>
 
 </body>
 
