@@ -2,21 +2,154 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications | Erica Joshua</title>
 
-<title>Certifications</title>
+<style>
 
-<link rel="stylesheet" href="style.css">
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#c084fc;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+}
+
+nav ul li a:hover{
+color:#c084fc;
+}
+
+/* HEADER */
+
+.cert-header{
+text-align:center;
+margin-top:40px;
+}
+
+.cert-header h1{
+font-size:40px;
+}
+
+.cert-header span{
+color:#c084fc;
+}
+
+.cert-header p{
+color:#cbd5f5;
+margin-top:10px;
+}
+
+/* GRID */
+
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+padding:60px 100px;
+}
+
+/* CARD */
+
+.cert-card{
+background:#111827;
+padding:30px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.cert-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 30px rgba(192,132,252,0.35);
+}
+
+/* LOGO */
+
+.cert-card img{
+width:60px;
+margin-bottom:15px;
+}
+
+/* TITLE */
+
+.cert-card h3{
+font-size:18px;
+margin-bottom:8px;
+}
+
+/* ORGANIZATION */
+
+.cert-org{
+color:#c084fc;
+font-size:15px;
+}
+
+/* DATE */
+
+.cert-date{
+color:#94a3b8;
+font-size:14px;
+margin:10px 0;
+}
+
+/* BUTTON */
+
+.cert-card a{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:#c084fc;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+}
+
+.cert-card a:hover{
+background:#a855f7;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<nav>
-<ul class="navbar">
+<!-- NAVIGATION -->
 
+<nav>
+
+<div class="logo">EM.</div>
+
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="skills.html">Skills</a></li>
@@ -24,55 +157,94 @@
 <li><a href="certifications.html">Certifications</a></li>
 <li><a href="resume.html">Resume</a></li>
 <li><a href="contact.html">Contact</a></li>
-
 </ul>
+
 </nav>
 
-<section>
 
-<h1>Certifications</h1>
+<!-- HEADER -->
 
-<div class="project-card">
+<div class="cert-header">
 
-<h3>Google Data Analytics Certificate</h3>
+<h1>My <span>Certifications</span></h1>
 
-<p>
-Completed the Google Data Analytics Professional Certificate covering
-data cleaning, data visualization, SQL, and data analysis techniques.
-</p>
+<p>Professional certifications demonstrating my expertise in data analytics, machine learning, and technology.</p>
 
 </div>
 
-<div class="project-card">
 
-<h3>IBM Data Science Certificate</h3>
+<!-- CERTIFICATION GRID -->
 
-<p>
-Learned data science fundamentals including Python, data analysis,
-and machine learning basics.
-</p>
+<div class="cert-grid">
+
+<!-- IBM -->
+
+<div class="cert-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
+
+<h3>IBM Data Science Professional Certificate</h3>
+
+<p class="cert-org">IBM</p>
+
+<p class="cert-date">Feb 2026</p>
+
+<a href="#">View Certificate</a>
 
 </div>
 
-<div class="project-card">
 
-<h3>Python for Data Analysis</h3>
+<!-- GOOGLE -->
 
-<p>
-Developed skills in data manipulation using Python libraries such as
-Pandas and NumPy.
-</p>
+<div class="cert-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+
+<h3>Google Data Analytics Professional Certificate</h3>
+
+<p class="cert-org">Google</p>
+
+<p class="cert-date">Apr 2025</p>
+
+<a href="#">View Certificate</a>
 
 </div>
 
-</section>
 
-<footer>
+<!-- BRITISH AIRWAYS -->
 
-<p>© 2026 Erica Manyama | Data Analyst Portfolio</p>
+<div class="cert-card">
 
-</footer>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/British_Airways_Logo.svg/2560px-British_Airways_Logo.svg.png">
+
+<h3>Data Science Job Simulation</h3>
+
+<p class="cert-org">British Airways</p>
+
+<p class="cert-date">Aug 2025</p>
+
+<a href="#">View Certificate</a>
+
+</div>
+
+
+<!-- FREECODECAMP -->
+
+<div class="cert-card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png">
+
+<h3>Responsive Web Design</h3>
+
+<p class="cert-org">FreeCodeCamp</p>
+
+<p class="cert-date">Oct 2023</p>
+
+<a href="#">View Certificate</a>
+
+</div>
+
+</div>
+
 
 </body>
-
-</html>
