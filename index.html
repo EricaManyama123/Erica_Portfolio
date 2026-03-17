@@ -166,8 +166,8 @@ color:#aaa;
  color:#c084fc
 }
 @keyframes blink{
-  0%,50%,100%{opacity:1;}
-  25%,75%{opacity:0;}
+ 0%,100%{opacity:1;}
+ 50%{opacity:0;}
 }
 .hero-buttons{
 margin-top:-60px;
@@ -205,21 +205,7 @@ transition:0.3s;
 background:#c084fc;
 color:white;
 }
-.btn-primary:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 20px rgba(192,132,252,0.3);
-}
 
-.btn-secondary:hover{
-border-color:#c084fc;
-color:#c084fc;
-}
-.scroll-down{
-margin-top:40px;
-font-size:14px;
-color:#aaa;
-animation:fade 2s infinite;
-}
 
 @keyframes fade{
 0%,100%{opacity:0.3;}
@@ -250,7 +236,6 @@ animation:fade 2s infinite;
 </nav>
 
 <!-- HERO -->
-<div class="scroll-down">↓ Scroll</div>
 
 <section class="hero">
 
@@ -309,39 +294,45 @@ I am continuously expanding my skill set across various areas of data, learning 
 
 <script>
 
-const roles=["Data Analyst","Data Scientist","Turning Data into Smart Decisions]
+const roles = [
+"Data Analyst",
+"Data Scientist",
+"Turning Data into Smart Decisions"
+];
 
-let i=0
-let j=0
-let current=""
-let isDeleting=false
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
 
-function type(){
+function type() {
 
-current=roles[i]
+current = roles[i];
 
-if(isDeleting){
-document.getElementById("typing").textContent=current.substring(0,j--)
-}else{
-document.getElementById("typing").textContent=current.substring(0,j++)
+if (isDeleting) {
+document.getElementById("typing").innerHTML = current.substring(0, j--) + "<span class='cursor'>|</span>";
+} else {
+document.getElementById("typing").innerHTML = current.substring(0, j++) + "<span class='cursor'>|</span>";
 }
 
-if(!isDeleting && j===current.length+1){
-isDeleting=true
-setTimeout(type,1000)
-return
+// When typing is complete
+if (!isDeleting && j === current.length + 1) {
+isDeleting = true;
+setTimeout(type, 1200); // pause before deleting
+return;
 }
 
-if(isDeleting && j===0){
-isDeleting=false
-i=(i+1)%roles.length
+// When deleting is complete
+if (isDeleting && j === 0) {
+isDeleting = false;
+i = (i + 1) % roles.length;
 }
 
-setTimeout(type,isDeleting?60:120)
-
+// Speed control
+setTimeout(type, isDeleting ? 50 : 100);
 }
 
-type()
+type();
 
 </script>
 
