@@ -162,11 +162,46 @@ color:#aaa;
  display:inline-block;
  margin-left:5px;
  animation:blink 1s infinite;
+ opacity:0.8;
  color:#c084fc
 }
 @keyframes blink{
   0%,50%,100%{opacity:1;}
   25%,75%{opacity:0;}
+}
+.hero-buttons{
+margin-top:25px;
+display:flex;
+gap:20px;
+}
+
+.btn{
+padding:10px 22px;
+background:#c084fc;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#a855f7;
+}
+
+.btn-outline{
+padding:10px 22px;
+border:1px solid #c084fc;
+color:#c084fc;
+text-decoration:none;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn-outline:hover{
+background:#c084fc;
+color:white;
 }
 </style>
 
@@ -205,6 +240,11 @@ color:#aaa;
 </h2>
 
 </section>
+ 
+<div class="hero-buttons">
+  <a href="projects.html" class="btn">View Projects</a>
+  <a href="contact.html" class="btn-outline">Contact Me</a>
+</div>
 
 <!-- INTRO -->
 
