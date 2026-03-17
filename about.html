@@ -18,7 +18,8 @@ font-family:Poppins;
 color:white;
 background:#0d1b2a;
 }
-  /* STAR BACKGROUND */
+
+/* STAR BACKGROUND */
 
 body::before{
 content:"";
@@ -68,9 +69,9 @@ color:#c084fc;
 /* ABOUT SECTION */
 
 .about{
-max-width:800px;
+max-width:900px;
 margin:auto;
-padding:120px 20px;
+padding:100px 20px 40px;
 }
 
 .about h1{
@@ -84,13 +85,65 @@ font-size:18px;
 margin-bottom:20px;
 }
 
+/* EDUCATION SECTION */
+
+.education{
+max-width:900px;
+margin:auto;
+padding:40px 20px 80px;
+}
+
+.education h2{
+font-size:32px;
+margin-bottom:30px;
+}
+
+.education span{
+color:#c084fc;
+}
+
+/* EDUCATION CARDS */
+
+.edu-card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.edu-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(192,132,252,0.3);
+}
+
+.edu-card h3{
+margin-bottom:8px;
+}
+
+.degree{
+color:#c084fc;
+margin-bottom:6px;
+}
+
+.cgpa{
+font-size:14px;
+color:#ccc;
+}
+
+.location, .date{
+font-size:14px;
+color:#94a3b8;
+}
+
 /* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
 border-top:1px solid #333;
-margin-top:100px;
+margin-top:50px;
 color:#aaa;
 }
 
@@ -116,34 +169,73 @@ color:#aaa;
 
 </nav>
 
+<!-- ABOUT -->
+
 <section class="about">
 
 <h1>About Me</h1>
 
 <p>
-My name is Erica Joshua Manyama, and I am from Tanzania, East Africa. I am currently a third-year student at Lovely Professional University, majoring in Data Science and Data Engineering. I consider myself a passionate and curious individual who enjoys learning and solving problems through data. My interest in data stems from a curiosity about how information and patterns can help explain real-world challenges and support better decision-making.
+My name is Erica Joshua Manyama, and I am from Tanzania, East Africa. I am currently a third-year student at Lovely Professional University, majoring in Data Science and Data Engineering. I consider myself a passionate and curious individual who enjoys learning and solving problems through data.
 </p>
 
 <p>
-Throughout my academic journey, I have developed experience working with tools such as <strong>Python</strong>, <strong>SQL</strong>, <strong>Excel</strong>, and <strong>Power BI</strong> to clean, analyze, and visualize data effectively. I enjoy exploring datasets, identifying trends, and transforming complex information into clear insights that help people better understand data.
+I have experience working with <strong>Python</strong>, <strong>SQL</strong>, <strong>Excel</strong>, and <strong>Power BI</strong> to clean, analyze, and visualize data effectively. I enjoy exploring datasets and transforming complex information into meaningful insights.
 </p>
 
 <p>
-Alongside my technical skills, I value strong soft skills such as attention to detail, problem solving, teamwork, and clear communication, which enable me to effectively interpret and present data insights.
+Alongside technical skills, I value attention to detail, problem solving, teamwork, and communication.
 </p>
 
 <p>
-Outside of academics, I enjoy participating in sports ⚽ and exploring new places 🌍. These experiences allow me to stay active, explore new cultures, and gain new perspectives that inspire both personal and professional growth.
+Outside academics, I enjoy sports ⚽ and exploring new places 🌍, which help me grow both personally and professionally.
 </p>
 
 <p>
-My goal is to build a career where I am considered a valuable asset and can use data to help organizations make informed decisions and create meaningful impact.
+My goal is to use data to help organizations make informed decisions and create meaningful impact.
 </p>
+
 </section>
+
+<!-- EDUCATION -->
+
+<section class="education">
+
+<h2>My <span>Education</span></h2>
+
+<div class="edu-card">
+
+<h3>Lovely Professional University</h3>
+
+<p class="degree">Bachelor of Technology – Data Science & Data Engineering</p>
+
+<p class="cgpa">CGPA: 8.38</p>
+
+<p class="location">Punjab, India</p>
+
+<p class="date">Aug 2023 – Present</p>
+
+</div>
+
+<div class="edu-card">
+
+<h3>Baobab High School</h3>
+
+<p class="degree">Intermediate Education</p>
+
+<p class="location">Pwani, Tanzania</p>
+
+<p class="date">Jul 2021 – May 2023</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 Erica Manyama | Data Analyst & Data Scientist
+©️ 2026 Erica Manyama | Data Analyst & Data Scientist
 
 </footer>
 
