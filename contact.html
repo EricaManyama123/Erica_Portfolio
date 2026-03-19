@@ -12,6 +12,9 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+h1 span{
+color:#c084fc;
+}
 
 body{
 margin:0;
@@ -91,6 +94,10 @@ padding:40px;
 
 .contact-info{
 width:350px;
+line-height:2;
+}
+.contact-info a:hover{
+color:#c084fc;
 }
 
 .contact-info h2{
@@ -122,10 +129,15 @@ color:white;
 /* MAP */
 
 .map iframe{
-width:450px;
-height:300px;
-border-radius:10px;
+width:100%
+max-width:400px;
+height:250px;
+border-radius:12px;
 border:none;
+}
+.map{
+display:flex;
+justify-content:center;
 }
 
 /* FORM SECTION */
@@ -152,29 +164,39 @@ input, textarea{
 width:100%;
 padding:15px;
 margin-bottom:20px;
-border-radius:6px;
-border:none;
+
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.2);
+color:white;
+
+border-radius:8px;
+outline:none;
 }
 
 textarea{
 height:150px;
 resize:none;
+font-family:inherit;
 }
-
+input:focus, textarea:focus{
+border:1px solid #c084fc;
+box-shadow:0 0 10px rgba(192,132,252,0.5);
+}
 /* BUTTON */
 
 button{
-background:#14b8a6;
-color:white;
+background:linear-gradient(135deg,#a78bfa,#c084fc);
 border:none;
-padding:15px 30px;
-font-size:16px;
-border-radius:6px;
+padding:12px 25px;
+border-radius:8px;
+color:white;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-background:#0f766e;
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(192,132,252,0.6);
 }
 
 /* FOOTER */
@@ -211,8 +233,8 @@ margin-top:40px;
 
 <section class="contact-header">
 
-<h1>Contact Me</h1>
-<p>Feel free to reach out for collaborations or opportunities.</p>
+<h1>Get In <span>Touch</span></h1>
+<p>Open to opportunities,collaboration and meaningful conversations</p>
 
 </section>
 
@@ -235,7 +257,7 @@ ericacjmanyama@gmail.com
 <div class="contact-item">
 <i class="fa-brands fa-github"></i>
 <a href="https://github.com/EricaManyama123" target="_blank">
-github.com/EricaManyama123
+Github Proile
 </a>
 </div>
 
@@ -248,7 +270,7 @@ LinkedIn Profile
 
 <div class="contact-item">
 <i class="fa-solid fa-phone"></i>
-+91 6280388425
+<a href="tel:+916280388425">+91 6280388425</a>
 </div>
 
 </div>
